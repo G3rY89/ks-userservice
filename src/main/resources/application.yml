@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: ks-userservice
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8760/eureka/
