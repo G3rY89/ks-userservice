@@ -30,7 +30,8 @@ public class UserController {
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     public void removeUser(@RequestParam("userid") String userId){
-        userRepository.delete(Integer.parseInt(userId));
+        User user = userRepository.getOne(Integer.parseInt(userId));
+        userRepository.delete(user);
     }
 
 }
